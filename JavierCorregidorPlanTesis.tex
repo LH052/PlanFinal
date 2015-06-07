@@ -1,0 +1,506 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[spanish]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{color}
+\usepackage{amsmath,amssymb,bm,amsthm,multicol,ifthen}
+\usepackage{fancyhdr}
+\usepackage{multirow}
+\usepackage{lscape}
+\usepackage{array}
+\usepackage{float}
+\usepackage{nicefrac}
+\usepackage{picinpar}
+\usepackage{enumitem}
+\usepackage{epstopdf}
+\usepackage{verbatim}
+\usepackage{url}
+
+%símbolos matemáticos de la AMS
+\usepackage{amsmath,amssymb,amsfonts,latexsym,cancel}
+\usepackage[spanish]{babel}
+\usepackage[latin1]{inputenc} %acentos desde el teclado
+\usepackage[T1]{fontenc}
+
+% Comandos especiales
+\newcommand{\sen}{\mathop{\rm sen}\nolimits} %seno
+\newcommand{\arcsen}{\mathop{\rm arcsen}\nolimits}
+\newcommand{\arcsec}{\mathop{\rm arcsec}\nolimits}
+\def\maxi{\mathop{\mbox{\rm Máx}}} % máximo
+\def\mini{\mathop{\mbox{\rm Mín}}} % mínimo
+\def\sup{\mathop{\mbox{\rm Sup}}} % máximo
+\def\infi{\mathop{\mbox{\rm Ínf}}} % mínimo
+
+
+\pretolerance=10000
+\tolerance=10000
+\hyphenation{initio va-rie-dad ge-ne-ral-men-te Geo-me-tri-ca va-lor co-rrien-te}
+
+% \textheight=23.5cm
+% \textwidth=16cm
+% \topmargin=-1.5cm
+% \oddsidemargin=0cm
+
+\renewcommand{\baselinestretch}{1}
+\addto\captionsspanish{\renewcommand{\refname}{Bibliografía}}
+\setlength\parindent{0pt}
+
+
+\begin{document}
+
+\renewcommand{\refname}{}
+
+\begin{center}
+%\includegraphics[scale=0.12]{epn.pdf}\\
+\textbf{\large{ESCUELA POLITÉCNICA NACIONAL}}\\
+\textbf{FACULTAD DE CIENCIAS\\PLAN DE PROYECTO DE TITULACIÓN\\CARRERA DE FÍSICA}
+
+\begin{longtable}{|p{0.45\textwidth}|p{0.55\textwidth}|}
+\hline
+\multirow{4}{5cm} & \textbf{LÍNEA DE INVESTIGACIÓN:}\\
+{\textbf{PROPUESTO POR:}} & Física Teórica \\
+\cline{2-2}
+Javier Corregidor &\textbf{SUBLÍNEA DE INVESTIGACIÓN:}\\
+ & Fundamentos de Teoría Cuántica\\
+\hline
+
+\textbf{AUSPICIADO POR:} & \textbf{FECHA:}\\
+Dr. Eduardo V.  Ludeña & {\today}\\
+
+\hline	
+\end{longtable}
+\end{center}
+
+  \section{Título del Proyecto de Titulación}
+
+    \begin{center}
+      PROBLEMA DE LA N-REPRESENTABILIDAD FUNCIONAL EN LA TEORÍA DEL FUNCIONAL DE LA DENSIDAD PARA SISTEMAS CUÁNTICOS Y SU EXTENSIÓN A SISTEMAS CLÁSICOS.\\
+    \end{center}
+
+
+
+  \section{Planteamiento del Problema}
+
+    La Teoría del Funcional de la Densidad, DFT, (de sus siglas en inglés: "Density Functional Theory") diseñada originalmente por Hohenberg, Kohn y Sham \cite{hohenberg1964inhomogeneous,kohn1965self,kohn1999nobel} para el cálculo de la energía del estado fundamental de sistemas cuánticos (i.e., átomos, moléculas, materia condensada)  ha sido extendida por Evans  para tratar sistemas clásicos.\cite{evans1979nature}.  La extensión de DFT hecha por Evans para sistemas clásicos se basa en el trabajo de Mermin\cite{mermin1965thermal} en el cual se desarrolla una versión de  DFT para sistemas a temperatura finita por medio de la introducción de  la función de energía libre del  ensamble macro canónico. A esto  se  añade un principio variacional (desigualdad de Gibbs) y se formula la energía libre como un funcional de la densidad de una partícula.\\
+
+    La teoría clásica del funcional de la densidad, cDFT \cite{hansen1990theory,evans2009warsaw} crea las bases para la determinación de las propiedades termodinámicas y las funciones de correlación  de una amplia variedad de modelos para fluidos no homogéneos. Esto se hace partiendo de un Hamiltoniano modelo de tipo  microscópico que describe las interacciones entre las "partículas" del líquido no homogéneo.\cite{kahl2009classical,wittkowski2011dynamical}  En realidad estos tipos de modelos parten de una definición de partícula a nivel microscópico en donde éstas no son electrones ni núcleos atómicos (o iones), como ocurre en el caso cuántico, sino que son porciones de materia (átomos, grupos de átomos, moléculas, etc.)  que interactúan entre sí por medio de potenciales  $U({\bf r}_1, ..., {\bf r}_N)$ y con campos externos $V({\bf r}_1, ..., {\bf r}_N)$ pero que  mantienen sus características durante los procesos físicos a estudiar.\\
+
+    En cDFT  se supone que el potencial del ensamble macro canónico  para un fluido  no homogéneo específico  es un funcional de la densidad promedio de una partícula $\rho({\bf r_i})$ en donde ${\bf r_i}$ es la coordenada de la posición en el espacio de  la partícula $i$.\cite{evans2009warsaw}.\\
+
+    La derivación  en el caso clásico de cDFT procede por medio de una extensión del teorema de Hohenberg-Kohn-Mermin a través de la cual se establece una relación de uno-a-uno entre el potencial externo y la densidad de una partícula.\cite{evans1979nature,weeks2003external}  Sin embargo, en la definición del correspondiente funcional  de la densidad para sistemas clásicos es necesario hacer la suposición de que $F_{ex}[\rho]$, o sea la parte del funcional que describe los efectos de \lq\lq exceso\rq\rq\, en un fluido, por ejemplo, provienen del Hamiltoniano original del sistema y de su correspondiente densidad de probabilidad en el equilibrio.  Justamente, la determinación de las condiciones que deben cumplirse para que esta suposición sea cierta, constituyen el problema de la $N$-representabilidad del sistema clásico.\cite{garrod1964reduction}  Este problema es el objeto principal de investigación en la presente tesis.\\
+    
+      \subsection{Tomado de la parte cuatro del anterior documento}
+	El éxito que ha tenido la teoría del funcional de la densidad, DFT,  para la determinación de la estructura electrónica de átomos, moléculas y materia condensada, la ha potenciado también en otras áreas como la de los fluidos no homogéneos clásicos, para cuyo tratamiento se ha desarrollado la versión clásica de la teoría, cDFT. El trabajo fundamental en esta extensión ha sido hecho por Evans. \cite{evans1979nature}.\\
+
+	En la actualidad esta versión de DFT ha tenido un crecimiento acelerado debido a su importancia para tratar los problemas de líquidos no homogéneos.\cite{evans2009warsaw,lowen2009warsaw}.\\
+
+	Sin embargo, en la versión cuántica de Hohenberg-Kohn-Sham de la teoría, existen unas condiciones fundamentales de N-representabilidad del funcional $ F[\rho]$ que deben ser obedecidas para que la energía sea una cota superior de la energía exacta.\\
+
+	Para poner en contexto la discusión sobre la N-representabilidad, consideremos primero, este problema para la matriz 2.\\
+
+	\textbf{El problema de la  $N$-Representabilidad en la teoría de la matriz reducida de orden 2}\\
+
+	  El hamiltoniano para un sistema de N electrones en la aproximación de Born-Oppenheimer es:\\
+
+	    \begin{equation}\label{1}
+	      \widehat H^N=\widehat T+\widehat V_{ext}+\widehat V_{ee}=
+	      \sum_{i=1}\sp{N} \hat t({\bf r}_i)+
+	      \sum_{i=1}\sp{N} \hat v_{ext}({\bf r}_i)+
+	      \sum_{i=1}\sp{N-1}\sum_{j=i+1}\sp{N} {{1}\over{\vert{\bf r}_i-{\bf r}_j\vert}}
+	    \end{equation}
+
+	  en donde  $\hat t({\bf r}_i)=-(1/2)\nabla^2_{{\bf r}_i}$, $v_{ext}({\bf r}_i)$  es la interacción del electrón  $i$ con el campo externo de los núcleos  y  $1/\vert {\bf r}_i-{\bf r}_j\vert$ representa la repulsión electrón-electrón.  La energía expresada como un funcional de la función de onda normalizada $\Psi({\bf r}_1,\cdots,{\bf r}_N.)\in {\cal L}_N$ en donde  ${\cal L}_N$ es el espacio de Hilbert antisimérico, es:
+  
+	    \begin{equation}
+	      E[\Psi]\equiv \langle\Psi\vert\widehat H^N\vert\Psi\rangle\label{4}
+	    \end{equation}
+
+	  Obviamente, la energía del estado fundamental se puede obtener mediante la minimización de este funcional:
+
+	    \begin{equation}
+	      E_0=\infi_{\displaystyle\Psi\in{\cal L}_N} \Big\{\langle\Psi\vert\widehat H^N\vert\Psi\rangle\Big\}
+	    \end{equation}
+
+	   El mínimo se consigue para $\Psi=\Psi_0$, mismo que satisface la ecuación de Schrödinger  $\widehat H^N \Psi_0=E_0\Psi_0$.
+
+	   Sin embargo, debido a que este Hamiltoniano contiene cuando más interacciones entre pares de partículas, puede reescribirse como:
+
+	    \begin{equation}\label{operadorHredef}
+	      \widehat H^N=
+	      \sum_{i=1}\sp{N-1}\sum_{j=i+1}\sp{N} \widehat K^N_2({\bf r}_i,{\bf r}_j)
+	    \end{equation}
+
+	   en donde el operador de pares de partículas es:
+
+	    \begin{equation}\label{3}
+	      \widehat K^N_2({\bf r}_i,{\bf r}_j)= {{1}\over{N-1}}\left[(t({\bf r}_i)+\hat v_{ext}({\bf r}_i))+(t({\bf r}_j)+\hat v_{ext}({\bf r}_j))\right]+{{1}\over{\vert{\bf r}_i-{\bf r}_j\vert}}
+	    \end{equation}
+
+	  Introduciendo la matriz reducida de segundo orden (normalizada) $D^2_{\Psi}$ que corresponde a la función de onda $\Psi$:
+ 
+	    \begin{eqnarray}\label{matriz2def}
+	      D^2_{\Psi}&=&{{N(N-1)}\over {2}}\int d{\bf r}_3\cdots\int d{\bf r}_N
+	      \Psi({\bf r}_1,{\bf r}_2,{\bf r}_3,...,{\bf r}_N)
+	      \Psi({\bf r\sp\prime}_1,{\bf r\sp\prime}_2,{\bf r}_3,...,{\bf r}_N)
+	      \\
+	      &\equiv & \hat L^{N}_{2}\vert\Psi\rangle\langle\Psi\vert\nonumber
+	    \end{eqnarray}
+
+	  Entonces, en vista de la Ec. (\ref{operadorHredef}), la energía puede reescribirse como un funcional de $D^2_{\Psi}$
+
+	    \begin{equation}\label{5}
+	      E[\Psi]=Tr[\widehat K^N_2 D^2_{\Psi}]
+	    \end{equation}
+
+	  De esta manera, la energía del estado fundamental puede también obtenerse minimizando este funcional
+
+	    \begin{equation}\label{8}
+	      E_0= \infi_{\substack{\displaystyle\Psi\in{\cal L}_N\\\displaystyle{D^2_{\Psi}\in{\cal P}^2_N[\Psi]}}}\Big\{Tr[\widehat K^N_2 D_{\Psi}^2]\Big\}
+	    \end{equation}
+
+	  en donde
+
+	    \begin{equation}\label{8a}
+	      {\cal P}^2_N[\Psi]=\{ D^2_{\Psi} : \hat L^{N}_{2}\vert\Psi\rangle\langle\Psi\vert,\quad \Psi\in{\cal L}_N \}
+	    \end{equation}
+
+	  es el conjunto de matrices normalizadas de orden 2 que pueden obtenerse de funciones de onda. Sin embargo, para deslindarse de cualquier referencia a funciones de onda, consideremos el siguiente problema variacional:
+
+	    \begin{equation}\label{8b}
+	      E_0= \infi_{D^2\in{\cal P}^2_N=\{D^2\vert \textrm{ condiciones de N - representabilidad}\}}\Big\{Tr[\widehat K^N_2 D^2]\Big\}
+	    \end{equation}
+
+	  La minimización de la expresión para la energía sin imponer condiciones sobre la matriz de la densidad reducida  de orden 2, 2-MRD, lleva a valores de la energía por debajo del valor  exacto para el estado fundamental. Este resultado fue denomidado por Coleman como el problema de la N-representabilidad de la matriz 2.  Aparece debido a que es necesario imponer condiciones sobre la 2-MRD para garantizar que proviene de una matriz de orden N, o en forma equivalente, de una función de onda  de N-partículas.  Por lo tanto, el problema de la N-representabilidad en la teoría de la matriz 2 tiene que ver con la determinación de las condiciones necesarias y suficientes que intrínsecamente permitan definir  ${\cal P}^2_N$ tal que se garantice que  la 2-MRD ($D^2\in {\cal P}^2_N$) satisfaga la  Ec. (\ref{matriz2def}).\\
+
+	  Es de notarse que si no hubiera la necesidad de que que la 2-MRD satisfaga la condición $D^2\in{\cal P}^2_N$,  entonces el problema de $N$-partículas sólo tendría la dificultad del problema de dos partículas.\\
+
+	  Las condiciones exactas (incluso formales) de la N-representabilidad son conocidas \cite{garrod1964reduction}, desde hace un tiempo considerable:\\
+
+	  $D^2$ es $N$-representable si y solo si  para todo Hamiltoniano de N partículas,   $\widehat H^N$ se satisface la siguiente desigualdad:
+ 
+	    \begin{equation}\label{desigualdad}
+	      E_0[\widehat H^N]\le Tr[\widehat K^N_2 D^2]
+	    \end{equation}
+
+	  Una $D^2$ que no satisface la Ec. (\ref{desigualdad}) no es N-representable. Recíprocamente, si una $D^2$  no es  $N$-representable, entonces existe por lo menos un  $\widehat H^N$  que violará la desigualdad en Ec.\ref{desigualdad}.\cite{van2007necessary}\\
+
+	  En las últimas cinco décadas la investigación respecto de la teoría del funcional de la matriz densidad, DMFT, por sus siglas en inglés, ha evolucionado lenta pero consistentemente. Esto ha permitido encontrar condiciones de $N$-representabilidad, sobre todo en lo referente a la matriz de orden 2, no solo en la teoría sino también lograr aplicaciones prácticas. A todos estos avances teóricos le siguen el permanente desarrollo de esquemas computacionales prácticos que conducen a algoritmos de alta eficiencia, comparables con aquellos provistos por la mecánica cuántica. Actualmente la situación del análisis de la matriz de orden 2 se ve promisoria, no solamente por el progreso computacional sino porque las condiciones necesarias y suficientes para que una matriz de orden dos sea N-representable han sino completamente determinadas \cite{mazziotti2011two,nakata2012variational}.\\
+
+	\textbf{El Problema de la N-Representabilidad en DFT}\\
+
+	  En el contexto de la variación restringida de Levy \cite{levy1979universal}, el funcional universal $F[\rho]$  está definido por:\\
+
+	    \begin{equation}\label{10}
+	      F[\rho]= \infi_{\substack{\displaystyle\rho\in{\cal J}_N}}{\Big\{\langle\Psi_{\rho}\vert\widehat T +\widehat V_{ee}\vert\Psi_{\rho}\rangle\Big\}}
+	    \end{equation}
+
+	  En este caso,la función de onda $\Psi_{\rho}(\big({\bf r}_1,\dots,{\bf r}_N\big)$ es una función de $N$ partículas  en el espacio de Hilbert antisimétrico ${\cal L}_N$ que corresponde a una  densidad fija $\rho$.\\
+	  
+	  Al introducir el operador de dos partículas de orden cero:\\
+ 
+	    \begin{equation}\label{11}
+	      \widehat K_{2(0)}^N({\bf r}_i,{\bf r}_j)= {{1}\over{N-1}}\left[t({\bf r}_i)+t({\bf r}_i)\right]+{{1}\over{\vert{\bf r}_i-{\bf r}_j\vert}}
+	    \end{equation}
+
+	  y usando los mismos argumentos que para el caso de la matriz 2, podemos reescribir esta variación como:\\
+
+	    \begin{equation}\label{12}
+	      F[\rho]=\infi_{\substack{\displaystyle{\rho\in\cal J_N}\\\displaystyle{D^2_\rho\longrightarrow\rho\rm{  (fijo)}}}}\Big\{Tr[\widehat K^N_{2(0)} D^2_{\rho}]\Big\}
+	    \end{equation}
+
+	  donde $D^2_{\rho}\in{\cal P}^2_N$, además a su correspondiente principio variacional para la energía del estado fundamental:
+
+	    \begin{equation}\label{12a}
+	      E_0=\infi_{\substack{\displaystyle{\rho\in\cal J_N}}}\Big\{F[\rho] + \int d\sp 3{\bf r} v({\bf r})\Big\}
+	    \end{equation}
+
+	  La sorprendente similitud entre las ecuaciones (\ref{8}) y  (\ref{12}) en donde la última da la definición del funcional $F[\rho]$  exacto nos llevan a la conclusión que este funcional exacto sólamente puede ser caracterizado plenamente en términos de  las condiciones de N-representabilidad de la matriz reducida de orden 2.\\
+
+	  Existe la creencia extendida de que no hay un problema de N-representabilidad para la versión de Hohenberg-Kohn-Sham de DFT, HKS-DFT, ya que se consideraba que la única condición a imponerse era la N-representabilidad de la densidad, esto es, que la densidad provenga de una función de onda de N-electrones. Pero, como fue probado por Gilbert\cite{gilbert1975hohenberg} cualquier $\rho\in{\cal J}_N$ es $N$-representable.\\
+
+	  El problema de la N-representabilidad en DFT tiene que ver con la N-representabilidad  del funcional exacto $F[\rho]$ o de las aproximaciones que se usan en la práctica.  Este problema ha sido reconocido recientemente como el limitante más importante en el desarrollo de la versión HKS de DFT \cite{ludena2008n}. En este sentido, soluciones formales (condiciones necesarias y suficientes) para el problema de la N-representabilidad funcional  de $F[\rho]$ han sido propuestas por   Ayers y Liu \cite{ayers2007necessary} y una más práctica a través de un principio variacional para el hueco de intercambio por Ayers, Cuevas-Saavedra and Chakraborty.\cite{cuevas2012symmetric}.\\
+
+	  Sin embargo, a pesar de este reconocimiento formal, poco se ha hecho para imponer estas condiciones de N-representabilidad en la cosntrucción de los funcionales usados comunmente en DFT.  De hecho, la gran mayoría de los funcionales que se usan en DFT no cumplen con estas condiciones (sin embargo, son simples y fáciles de usar).  Hay que anotar que los funcionales desarrollados en el contexto de la versión de Escalamiento Local de DFT han sido construidos en forma explícita para que cumplan con estas condiciones \cite{kryachko1991formulation,kryachko1992formulation,ludena1999local}\\
+
+	\textbf{El Problema de la N-Representabilidad en cDFT}
+
+	  Dado que se conoce bastante sobre el problema de la N-representabilidad en HKS-DFT, se propone realizar el mismo tipo de análisis a la extensión de la teoría de HKS presente en la formulación para el ensamble macro canónico aplicado a la versión clásica de la teoría del funcional de la densidad, cDFT.\\
+
+	  Para poner esta discusión en contexto procedemos a desarrollar la formulación de la teoría del funcional de la densidad para sistemas clásicos.\\
+
+	  Parafraseando  a Evans\cite{evans1979nature}, consideremos el siguiente Hamiltoniano clásico:\\
+
+	    \begin{equation}\label{1}
+	      \widehat H_N= \widehat T + \widehat U + \widehat V
+	    \end{equation}
+
+	  en donde  la energía cinética clásica de $N$ partículas de masa $m$ es:\\
+
+	    \begin{equation}\label{2}
+	      \widehat T=\sum_{i=1}\sp N {{{\bf p}_i^2}\over{2m}}
+	    \end{equation}
+	  y el  potencial entre las partículas es:
+
+	    \begin{equation}\label{3}
+	      U\equiv U({\bf r}_1, ..., {\bf r}_N)
+	    \end{equation}
+
+	  el cual  no necesariamente está restringido a interacciones entre pares de partículas, y en donde el potencial externo (interacción de las partículas con un campo externo) es:\\
+
+	    \begin{equation}\label{4}
+	      V\equiv V({\bf r}_1, ..., {\bf r}_N)=\sum_{i=1}\sp N V_{ext}({\bf r}_i)
+	    \end{equation}
+
+	  Una cantidad básica en el desarrollo de cDFT es la densidad de una partícula $\rho({\bf r})$ la cual viene definida  como:\\
+
+	    \begin{equation}\label{5}
+	      \rho({\bf r})=\Big{\langle}\hat\rho({\bf r})\Big{\rangle}
+	    \end{equation}
+
+	  en donde el operador de la densidad de una partícula está dado por:
+
+	    \begin{equation}
+	      \hat\rho({\bf r})=\sum_{i=1}\sp N \delta({\bf r}-{\bf r}_i)
+	    \end{equation}
+
+	  y la operación indicada entre corchetes angulares es la traza clásica dada por
+
+	    \begin{equation}\label{7}
+	      \Big{\langle}\hat{\cal O}\Big{\rangle}\equiv Tr_{cl} f_o\hat{\cal O}
+	    \end{equation}
+
+	  en donde la operación de traza está explícitamente dada por
+ 
+	    \begin{equation}\label{operadorTraza}
+	      Tr_{cl} \equiv \sum_{N=1}\sp{\infty} {{}\over{}}\int d{\bf r}_1 ...\int d{\bf r}_N\int d{\bf p}_1...\int d{\bf p}_N
+	    \end{equation}
+	    
+	  En esta definición, $\int d{\bf r}_i$  denota la posición en el espacio de coordenadas de la partícula $i$ y similarmente, $\int d{\bf p}_i$, el momento de la partícula $i$ en el espacio de momentos.
+
+	  La función de distribución $f_o$ es una cantidad básica que se conoce también como la densidad de probabilidad en el equilibrio y viene definida por
+
+	    \begin{equation}\label{9}
+	      f_o={{1}\over{\Xi}} exp(-\beta(\widehat H_N-\mu N))
+	    \end{equation}
+
+	  en donde $\Xi$ es la función de partición del ensamble macro canónico:
+
+	    \begin{equation}\label{10}
+	      \Xi\equiv Tr_{cl} exp(-\beta(\widehat H-\mu N))
+	    \end{equation}
+
+	  En esta expresión, $\mu$ es el potencial químico y $\beta\equiv 1/K_B T$, en donde $T$ es la temperatura del sistema.\\
+
+	  La extensión de DFT al dominio clásico, se hace, siguiendo el trabajo de Mermin \cite{mermin1965thermal} a través de la introducción del funcional\\
+
+	    \begin{equation}\label{11}
+	      \Omega[f]= Tr_{cl} f (\widehat H_N-\mu N-\beta^{-1} \ln{f})
+	    \end{equation}
+
+	  Este funcional evaluado con la probabilidad de la densidad en el equilibrio da
+
+	    \begin{equation}\label{evalProbDenEq}
+	      \Omega[f_o]= -\beta^{-1}\ln{\Xi}
+	    \end{equation}
+
+	  La versión clásica de DFT, cDFT, se basa en una extensión del teorema de Hohenberg-Kohn-Mermin a sistemas clásicos realizada por Evans (ver Apéndice de \cite{evans1979nature}).
+
+	  La extensión procede por el mismo tipo de argumentación basado en el método de reducción al absurdo.\\
+
+	  Consideremos  el Hamiltoniano:
+
+	    \begin{equation}\label{13}
+	      \widehat H_N= \widehat T + \widehat U + \widehat V\sp\prime
+	    \end{equation}
+
+	  en donde 
+
+	    \begin{equation}\label{14}
+	      V\sp\prime=\sum_{i=1}\sp N V_{ext}\sp\prime({\bf r}_i)
+	    \end{equation}
+
+	  El hamiltoniano  $\widehat H_{N}\sp\prime$ tiene asociado una probabilidad de densidad en equilibrio $f\sp\prime$ y $u_j$ potencial macro canónico:\\
+
+	    \begin{equation}\label{15}
+	      \Omega\sp\prime\equiv \Omega[f\sp\prime]
+	    \end{equation}
+
+	  Evans\cite{evans1979nature} que aún en el caso que los dos potenciales  difieran entre sí por una constante, esto es 
+ 
+	    \begin{equation}\label{16}
+	      V_{ext}({\bf r})-V_{ext}\sp\prime({\bf r})=cte
+	    \end{equation}
+
+	  las densidades de probabilidad en equilibrio de estos sistemas son diferentes. En efecto,
+
+	    \begin{eqnarray}\label{17}
+	      \Omega[f\sp\prime]&=& Tr_{cl} f\sp\prime (\widehat H_{N}\sp\prime-\mu N-\beta^{-1} \ln{f\sp\prime})
+	      \nonumber\\
+	      &<&
+	      Tr_{cl} f_o (\widehat H_{N}\sp\prime-\mu N-\beta^{-1} \ln{f_o})
+	      \nonumber\\
+	      &<&
+	      \Omega[f_o] + \int d{\bf r}\rho_o({\bf r})(V_{ext}\sp\prime({\bf r})-V_{ext}({\bf r}))
+	    \end{eqnarray}
+
+	  Por otro lado, intercambiando las magnitudes con prima y con suníndice $o$  tenemos que 
+ 
+	    \begin{equation}\label{18}
+	      \Omega[f_o] < \Omega[f\sp\prime] + \int d{\bf r}\rho_o({\bf r})(V_{ext}({\bf r})-V_{ext}\sp\prime({\bf r} )   )
+	    \end{equation}
+
+	  ya que su supone que  $f\sp\prime$ da origen a la misma densidad de una partícula $\rho({\bf r})$. Sumando las dos desigualdades se obtiene
+ 
+	    \begin{equation}\label{19}
+	      \Omega[f_o]+\Omega[f\sp\prime] < \Omega[f_o]+\Omega[f\sp\prime]
+	    \end{equation}
+
+	  lo cual es una contradicción.  De aquí se desprende que  hay una relación uno-a-uno entre las densidades de probabilidad en equilibrio, las densidades de una partícula y los potenciales externos:
+ 
+	    \begin{eqnarray}\label{20}
+	      f\sp\prime &\longrightarrow & \rho\sp\prime({\bf r}) \longleftrightarrow V_{ext}\sp\prime({\bf r}) 
+	      \nonumber\\
+	      f_o &\longrightarrow & \rho_o({\bf r})\sp\prime \longleftrightarrow V_{ext}({\bf r} )
+	    \end{eqnarray}
+
+	  En los últimos años se han realizado dos  intentos\cite{dwandaru2011variational,schmidt2012recent} de   proveer una justificación básica a la cDFT por medio de una argumentación que parafrasea a la de Levy cuando este autor presenta una definición del funcional de la densidad para un estado puro cuántico basándose en el método de variación restringida\cite{dwandaru2011variational}.  Pero, debido a la argumentación dada más arriba sobre las dificultades intrínsecas del método de Levy y la demostración que su definición del funcional $F[\rho]$ lleva implícitas las condiciones de $N$.representabilidad de la matrix 2, cabe suponer que en las extensiones de DFT a sistemas clásicos, debe estar también implícito el problema de la $N$-representabilidad del funcional $F_{ex}[\rho]$ el cual es un ingrediente básico del funcional para el ensamble macro canónico en el caso clásico.
+ 
+
+
+  \section{Objetivos de la Investigación}
+
+    \subsection{Objetivo General}
+      \begin{itemize}
+	\item El objetivo de este trabajo es  examinar el  problema de la N-representabilidad en la formulación clásica de la teoría del  funcional de la densidad.
+      \end{itemize}
+    
+    \subsection{Objetivos Específicos}
+      \begin{itemize}
+	\item  Determinar la forma particular  en que este problema reaparece  en la  formulación clásica  de DFT, esto es, las condiciones que debe cumplir el funcional para ser N-representable.
+	\item Examinar si  aproximaciones simples al funcional de exceso $F_{ex}[n({\bf r})]$ cumplen con las  condiciones determinadas para la  N-representabilidad.
+      \end{itemize}
+     
+
+  \section{Justificación del Proyecto}
+
+    En el año de 1964 Garrod y Percus \cite{garrod1964reduction} propusieron varias ideas respecto al análisis de los requerimientos para el cumplimiento de las condiciones de N-Representabilidad que si bien resultaban en condiciones necesarias, aún estaban lejos de ser suficientes. El desarrollo del presente proyecto se basa en el hecho de que las condiciones de $N$-representabilidad han sido completamente determinadas para el caso cuántico por Mazzioti \cite{mazziotti2011two}. Sin embargo en el caso clásico se ha notado el resurgimiento de los problemas de $N$-representabilidad para la matriz de densidad de orden 2.\\
+
+    La importancia en el desarrollo de este proyecto radica en el éxito que ha tenido la teoría del funcional de la densidad, DFT,  en la determinación de la estructura electrónica de átomos, moléculas y de materia condensada, estos logros han sido potenciados también en otras áreas como el tratamiento de fluidos no homogéneos clásicos, para cuyo entendimiento se ha desarrollado la versión clásica de la teoría, cDFT. El trabajo fundamental en esta extensión ha sido propuesto por Evans \cite{evans1979nature,evans2009warsaw}, en estas publicaciones se han manifestado intereses relacionados con la naturaleza de la Interface Líquido-Vapor y el Equilibrio de Fluidos no homogéneos. Por otro lado Khal y Löwen han mostrado su interés en tópicos relacionados a los Fenómenos de Congelamiento y Dinámica en Cristales líquidos además de lo referente a su nucleación \cite{kahl2009classical,lowen2009warsaw}.\\
+
+    La exhaustiva búsqueda de resultados en esta área ha provocado el desarrollo de esquemas computacionales que conducen a algoritmos de eficiencia comparable a los que han sido provistos por la mecánica cuántica. En ese orden, el estudio y posterior entendimiento de la extensión de DFT al caso clásico ayudaría sin lugar a dudas además en variados campos de la ingeniería en los cuales los cálculos y su eficiencia son de vital importancia. 
+
+
+\section{Hipótesis de Trabajo}
+
+  Basados en lo que se conoce en la actualidad respecto de las condiciones de $N$-representabilidad del funcional de la energía para un estado puro en HKS-DFT, es posible extender estos resultados al análisis de la N-representabilidad del potencial del ensamble macro canónico formulado para sistemas clásicos, en particular para los funcionales diseñados para líquidos no homogéneos.\\
+
+
+  \section{Aspectos Metodológicos}
+
+    \begin{itemize}
+      \item Análisis de las condiciones de N-representabilidad en el caso general de un ensamble macro canónico clásico.
+      \item  Análisis de los problemas en la formulación variacional del potencial macro canónico expresado como un funcional de la densidad electrónica.
+      \item Análisis  de las condiciones de N-representabilidad para el potencial macro canónico de un sistema clásico.
+    \end{itemize}
+    \newpage
+
+  \section{Referencias}
+
+    \bibliography{JavierCorregidorPlanTesis}
+    \bibliographystyle{ieeetr}
+    \newpage
+
+  \section{Presupuesto y Fuentes de Financiamiento}
+
+Presupuesto aproximado:
+
+Impresiones (Documentos, Borradores del proyecto) \$40.00\\
+
+Material de oficina \$5.00\\
+
+Preparación documento final \$50.00\\
+
+Gastos de transporte \$30.00\\
+
+Total \$125.00\\
+
+El proyecto se realizará con fondos propios del autor.\\
+
+\section{Temario (tentativo)}
+
+\begin{itemize}
+\item Capítulo 1. Introducción.
+\item Capítulo 2. Marco Teórico
+\item Capítulo 3. Funcional de la Energía Cinética.
+\item Capítulo 4. Ecuaciones de Euler y Aproximaciones.
+\item Capítulo 5. Comparación con Orbitales Monoelectrónicos.
+\item Capítulo 6. Análisis y Discusión de Resultados.
+\item Capítulo 7: Conclusiones.
+\item Bibliografía
+\item Anexos
+\end{itemize}
+
+\section{Cronograma}
+
+En la tabla siguiente se muestra el cronograma de actividades previsto para el desarrollo del proyecto.
+
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|c|c|}
+\hline
+\multirow{2}{*}{\textbf{Actividad}} & \multicolumn{6}{c|}{\textbf{Mes}} \\
+\cline{2-7}
+	&	1	&	2	&	3	&	4	&	5	&	6		\\
+\hline																	
+Revisión bibliográfica de los fundamentos	&	x &	x	&	&	&	& 		 \\
+\hline																	
+Obtención de las ecuaciones de Euler	        &		&		&	x	&	 x	 &	&	 \\
+\hline																	
+Graficación y comparación de las densidades	&	&		&	 \multirow{2}{*}{x}	&	\multirow{2}{*}{x}			& &	\\
+con las obtenidas con orbitales.      	&	&	&	&	&		& 	 \\
+\hline																													
+Análisis de resultados	&	&	&	 & x	&	x		&		\\
+\hline																	
+Redacción del trabajo escrito	&	&	&	& 	&	x	&	\\
+\hline																	
+Presentación del borrador	&	&	&	&	& x		&\\
+\hline																	
+Corrección del borrador	&	&	&	&	&		&	x\\
+\hline																	
+Presentación del trabajo final y 	&	&	&	&		&	&	 \multirow{2}{*}{x} \\
+disertación del mismo	&	&	&	&	&	&			\\
+\hline
+\end{tabular}
+\end{center}
+
+
+\vspace{4cm}
+
+\begin{center}
+\begin{tabular}{c c c}
+\cline{1-1}	\cline{3-3}
+&	&	\\
+Dr. Eduardo Ludeña, Ph.D.	&	&	Javier Corregidor 		\\
+Director			&	&	Estudiante			\\
+Email: popluabe@yahoo.es	&	&	Email: neajavierc@hotmail.com\\
+Telf.: 0987983950		&	&	Telf.: 0991130096\\
+&&\\
+\end{tabular}
+\end{center}
+
+\vspace{70pt}
+
+\begin{center}
+\begin{tabular}{c c}
+\cline{1-1}	\cline{1-1}
+&\\
+Dr. Luis Celi, Ph.D.&	\\
+Co-Director	&	\\
+Email: luis.celi@epn.edu.ec	&\\
+Telf.: 0998203689&\\
+\end{tabular}
+\end{center}
+
+\end{document} 
