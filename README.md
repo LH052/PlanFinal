@@ -1,2 +1,2 @@
 # PlanFinal
-Plan Pendiente de de Aprobación
+Plan Pendiente de Aprobación

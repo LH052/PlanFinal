@@ -39,10 +39,10 @@
 \tolerance=10000
 \hyphenation{initio va-rie-dad ge-ne-ral-men-te Geo-me-tri-ca va-lor co-rrien-te}
 
-% \textheight=23.5cm
-% \textwidth=16cm
-% \topmargin=-1.5cm
-% \oddsidemargin=0cm
+\textheight=23.5cm
+\textwidth=16cm
+\topmargin=-1.5cm
+\oddsidemargin=0cm
 
 \renewcommand{\baselinestretch}{1}
 \addto\captionsspanish{\renewcommand{\refname}{Bibliografía}}
@@ -101,137 +101,89 @@ Dr. Eduardo V.  Ludeña & {\today}\\
 
 	Para poner en contexto la discusión sobre la N-representabilidad, consideremos primero, este problema para la matriz 2.\\
 
-	\textbf{El problema de la  $N$-Representabilidad en la teoría de la matriz reducida de orden 2}\\
+	\textbf{El problema de la N-representabilidad en la teoría de la matriz reducida de orden 2}\\
 
-	  El hamiltoniano para un sistema de N electrones en la aproximación de Born-Oppenheimer es:\\
+	De la mecánica cuántica se conoce que la estructura del Hamiltoniano para un sistema de N electrones en la aproximación de Born-Oppenheimer está compuesto de al menos tres partes, una concerniente a la energía cinética, otra que corresponde al potencial repulsivo entre electrones y otro que describe a la interacción de los electrones que componen el sistema con un potencial externo. Además es bien conocido que la energía del sistema se expresa como un funcional de la función de onda normalizada, que se escribe de la siguiente forma:
 
-	    \begin{equation}\label{1}
-	      \widehat H^N=\widehat T+\widehat V_{ext}+\widehat V_{ee}=
-	      \sum_{i=1}\sp{N} \hat t({\bf r}_i)+
-	      \sum_{i=1}\sp{N} \hat v_{ext}({\bf r}_i)+
-	      \sum_{i=1}\sp{N-1}\sum_{j=i+1}\sp{N} {{1}\over{\vert{\bf r}_i-{\bf r}_j\vert}}
-	    \end{equation}
+	  \begin{equation}\label{4}
+	    E[\Psi]\equiv \langle\Psi\vert\widehat H^N\vert\Psi\rangle
+	  \end{equation}
 
-	  en donde  $\hat t({\bf r}_i)=-(1/2)\nabla^2_{{\bf r}_i}$, $v_{ext}({\bf r}_i)$  es la interacción del electrón  $i$ con el campo externo de los núcleos  y  $1/\vert {\bf r}_i-{\bf r}_j\vert$ representa la repulsión electrón-electrón.  La energía expresada como un funcional de la función de onda normalizada $\Psi({\bf r}_1,\cdots,{\bf r}_N.)\in {\cal L}_N$ en donde  ${\cal L}_N$ es el espacio de Hilbert antisimérico, es:
-  
-	    \begin{equation}
-	      E[\Psi]\equiv \langle\Psi\vert\widehat H^N\vert\Psi\rangle\label{4}
-	    \end{equation}
+	Donde E se usa para la energía, $\Psi$ es la función de onda que describe al sistema de N partículas y $\widehat H^N$ es el hamiltoniano para N partículas. También es conocido que la energía del estado fundamental se obtiene mediante la minimización de ese funcional, ese mínimo cumple con la ecuación de Schrödinger.
 
-	  Obviamente, la energía del estado fundamental se puede obtener mediante la minimización de este funcional:
+	Es fácil demostrar que este hamiltoniano contiene términos que incluyen operadores de, a lo más, dos partículas, este hecho nos permite no solamente reescribir la forma del hamiltoniano habitual, sino reformular su estructura en términos de estos operadores que en principio describen interacciones entre pares de partículas.
 
-	    \begin{equation}
-	      E_0=\infi_{\displaystyle\Psi\in{\cal L}_N} \Big\{\langle\Psi\vert\widehat H^N\vert\Psi\rangle\Big\}
-	    \end{equation}
+	La introducción de la matriz reducida de segundo orden (normalizada) correspondiente a una función de onda específica nos premite reescribir la energía como un funcional de esta matriz, de la siguiente forma:
 
-	   El mínimo se consigue para $\Psi=\Psi_0$, mismo que satisface la ecuación de Schrödinger  $\widehat H^N \Psi_0=E_0\Psi_0$.
+	  \begin{equation}\label{5}
+	    E[\Psi]=Tr[\widehat K^N_2 D^2_{\Psi}]
+	  \end{equation}
 
-	   Sin embargo, debido a que este Hamiltoniano contiene cuando más interacciones entre pares de partículas, puede reescribirse como:
+	En donde $\widehat K_2^N D_{\Psi}^2$ es el operador entre pares de partículas, mencionado arriba, y $D_{\Psi}^2$ representa a la matriz reducida de segundo orden, también mencionada arriba.
 
-	    \begin{equation}\label{operadorHredef}
-	      \widehat H^N=
-	      \sum_{i=1}\sp{N-1}\sum_{j=i+1}\sp{N} \widehat K^N_2({\bf r}_i,{\bf r}_j)
-	    \end{equation}
+	Así la energía del estado fundamental puede obtenerse minimizando el funcional:
 
-	   en donde el operador de pares de partículas es:
+	  \begin{equation}\label{8}
+	    E_0= \infi_{\substack{\displaystyle\Psi\in{\cal L}_N\\\displaystyle{D^2_{\Psi}\in{\cal P}^2_N[\Psi]}}}\Big\{Tr[\widehat K^N_2 D_{\Psi}^2]\Big\}
+	  \end{equation}
 
-	    \begin{equation}\label{3}
-	      \widehat K^N_2({\bf r}_i,{\bf r}_j)= {{1}\over{N-1}}\left[(t({\bf r}_i)+\hat v_{ext}({\bf r}_i))+(t({\bf r}_j)+\hat v_{ext}({\bf r}_j))\right]+{{1}\over{\vert{\bf r}_i-{\bf r}_j\vert}}
-	    \end{equation}
+	en donde $\cal L_N$ es el espacio de Hilbert de funciones de onda de N partículas y ${\cal P}^2_N[\Psi]=\{ D^2_{\Psi} : \hat L^{N}_{2}\vert\Psi\rangle\langle\Psi\vert,\quad \Psi\in{\cal L}_N \}$ es el conjunto de funciones de matrices normalizadas de orden 2 que pueden obtenerse de funciones de onda de N partículas. Sin embargo, con la intensión de deslindarse de cualquier referencia a funciones de onda específicas, se considera el siguiente problema variacional:
 
-	  Introduciendo la matriz reducida de segundo orden (normalizada) $D^2_{\Psi}$ que corresponde a la función de onda $\Psi$:
- 
-	    \begin{eqnarray}\label{matriz2def}
-	      D^2_{\Psi}&=&{{N(N-1)}\over {2}}\int d{\bf r}_3\cdots\int d{\bf r}_N
-	      \Psi({\bf r}_1,{\bf r}_2,{\bf r}_3,...,{\bf r}_N)
-	      \Psi({\bf r\sp\prime}_1,{\bf r\sp\prime}_2,{\bf r}_3,...,{\bf r}_N)
-	      \\
-	      &\equiv & \hat L^{N}_{2}\vert\Psi\rangle\langle\Psi\vert\nonumber
-	    \end{eqnarray}
+	  \begin{equation}\label{8b}
+	    E_0= \infi_{D^2\in{\cal P}^2_N=\{D^2\vert \textrm{ condiciones de N - representabilidad}\}}\Big\{Tr[\widehat K^N_2 D^2]\Big\}
+	  \end{equation}
 
-	  Entonces, en vista de la Ec. (\ref{operadorHredef}), la energía puede reescribirse como un funcional de $D^2_{\Psi}$
+	donde ${\cal P}^2_N=\{D^2\vert \textrm{ condiciones de N ? representabilidad}\}$. 
 
-	    \begin{equation}\label{5}
-	      E[\Psi]=Tr[\widehat K^N_2 D^2_{\Psi}]
-	    \end{equation}
+	La minimización de la expresión para la energía sin la imposición de ninguna condición sobre la matriz de densidad reducidad de orden 2, 2-MRD, lleva  a valores de la energía que están por debajo del valor exacto en el caso del estado fundamental. A este resultado Coleman lo llamó ?El problema de de la N-representabilidad de la matriz 2?. Este problema aparece puesto que es necesario la aplicación de condiciones sobre la 2-MRD con el fin de garantizar que esta provenga de una matriz de orden N, es decir que provenga de una función de onda de N partículas. En este punto, la teoría de la 2-MRD tiene que ver con la determinación de tales condiciones. Hay que notar que si no hubiera la necesidad de imponer las condiciones de N-representabilidad, entonces el problema de N partículas tendría solamente la dificultad del problema de dos partículas.
 
-	  De esta manera, la energía del estado fundamental puede también obtenerse minimizando este funcional
+	Las condiciones exactas, en el sentido formal, de la N-representabilidad son conocidas \cite{garrod1964reduction}, desde hace un tiempo considerable:
 
-	    \begin{equation}\label{8}
-	      E_0= \infi_{\substack{\displaystyle\Psi\in{\cal L}_N\\\displaystyle{D^2_{\Psi}\in{\cal P}^2_N[\Psi]}}}\Big\{Tr[\widehat K^N_2 D_{\Psi}^2]\Big\}
-	    \end{equation}
+	  \begin{quote}
+	    $D^2$ es N-representable si y solo si para todo Hamiltoniano de N partículas, $\widehat H^N$, se satisface la siguiente desigualdad.
 
-	  en donde
+	      \begin{equation}\label{desigualdad}
+		E_0[\widehat H^N]\le Tr[\widehat K^N_2 D^2]
+	      \end{equation}
+	  \end{quote}
 
-	    \begin{equation}\label{8a}
-	      {\cal P}^2_N[\Psi]=\{ D^2_{\Psi} : \hat L^{N}_{2}\vert\Psi\rangle\langle\Psi\vert,\quad \Psi\in{\cal L}_N \}
-	    \end{equation}
+	Una $D^2$ que no satisface esta condición, no es N-representable. Recíprocamente, si una $D^2$ no es N-representable, entonces existe por lo menos un $\widehat H^N$ que violará esta última ecuación. 
 
-	  es el conjunto de matrices normalizadas de orden 2 que pueden obtenerse de funciones de onda. Sin embargo, para deslindarse de cualquier referencia a funciones de onda, consideremos el siguiente problema variacional:
+	\textbf{El problema de la N-representabilidad en DFT}
 
-	    \begin{equation}\label{8b}
-	      E_0= \infi_{D^2\in{\cal P}^2_N=\{D^2\vert \textrm{ condiciones de N - representabilidad}\}}\Big\{Tr[\widehat K^N_2 D^2]\Big\}
-	    \end{equation}
+	En la descripción del hamiltoniano para N partículas que vimos anteriormente, podemos hacer una clara separación en dos partes, una parte que contiene la información concerniente a la energía cinética y junto a este, el potencial electrónico repulsivo entre pares de partículas y otra parte que da cuenta del potencial externo; como sabemos la primera parte es universal para cualquier sistema de N partículas y una minimización de la energía incluye también una minimización de esta primera parte. En el contexto de la variación restringida de Levy \cite{levy1979universal}, el funcional universal está definido por:
 
-	  La minimización de la expresión para la energía sin imponer condiciones sobre la matriz de la densidad reducida  de orden 2, 2-MRD, lleva a valores de la energía por debajo del valor  exacto para el estado fundamental. Este resultado fue denomidado por Coleman como el problema de la N-representabilidad de la matriz 2.  Aparece debido a que es necesario imponer condiciones sobre la 2-MRD para garantizar que proviene de una matriz de orden N, o en forma equivalente, de una función de onda  de N-partículas.  Por lo tanto, el problema de la N-representabilidad en la teoría de la matriz 2 tiene que ver con la determinación de las condiciones necesarias y suficientes que intrínsecamente permitan definir  ${\cal P}^2_N$ tal que se garantice que  la 2-MRD ($D^2\in {\cal P}^2_N$) satisfaga la  Ec. (\ref{matriz2def}).\\
+	  \begin{equation}\label{10}
+	    F[\rho]= \infi_{\substack{\displaystyle\rho\in{\cal J}_N}}{\Big\{\langle\Psi_{\rho}\vert\widehat T +\widehat V_{ee}\vert\Psi_{\rho}\rangle\Big\}}
+	  \end{equation}
 
-	  Es de notarse que si no hubiera la necesidad de que que la 2-MRD satisfaga la condición $D^2\in{\cal P}^2_N$,  entonces el problema de $N$-partículas sólo tendría la dificultad del problema de dos partículas.\\
+	En donde $\widehat T$ y $\widehat V_{ee}$ son el operador de energía cinética y el potencial electrónico repulsivo respectivamente, además la función de onda de N partículas corresponde a una densidad fija $\rho$. En analogía con el proceso descrito para la matriz 2, la estructura de este funcional, nos permite reescribirlo en términos de operadores de dos partículas y por consiguiente reescribir también la ecuación 12 como:
 
-	  Las condiciones exactas (incluso formales) de la N-representabilidad son conocidas \cite{garrod1964reduction}, desde hace un tiempo considerable:\\
+	  \begin{equation}\label{12}
+	    F[\rho]=\infi_{\substack{\displaystyle{\rho\in\cal J_N}\\\displaystyle{D^2_\rho\longrightarrow\rho\rm{  (fijo)}}}}\Big\{Tr[\widehat K^N_{2(0)} D^2_{\rho}]\Big\}
+	  \end{equation}
 
-	  $D^2$ es $N$-representable si y solo si  para todo Hamiltoniano de N partículas,   $\widehat H^N$ se satisface la siguiente desigualdad:
- 
-	    \begin{equation}\label{desigualdad}
-	      E_0[\widehat H^N]\le Tr[\widehat K^N_2 D^2]
-	    \end{equation}
+	Y además el correspondiente problema de optimización para la energía del estado fundamental:
 
-	  Una $D^2$ que no satisface la Ec. (\ref{desigualdad}) no es N-representable. Recíprocamente, si una $D^2$  no es  $N$-representable, entonces existe por lo menos un  $\widehat H^N$  que violará la desigualdad en Ec.\ref{desigualdad}.\cite{van2007necessary}\\
+	  \begin{equation}\label{12a}
+	    E_0=\infi_{\substack{\displaystyle{\rho\in\cal J_N}}}\Big\{F[\rho] + \int d\sp 3{\bf r} v({\bf r})\Big\}
+	  \end{equation}
 
-	  En las últimas cinco décadas la investigación respecto de la teoría del funcional de la matriz densidad, DMFT, por sus siglas en inglés, ha evolucionado lenta pero consistentemente. Esto ha permitido encontrar condiciones de $N$-representabilidad, sobre todo en lo referente a la matriz de orden 2, no solo en la teoría sino también lograr aplicaciones prácticas. A todos estos avances teóricos le siguen el permanente desarrollo de esquemas computacionales prácticos que conducen a algoritmos de alta eficiencia, comparables con aquellos provistos por la mecánica cuántica. Actualmente la situación del análisis de la matriz de orden 2 se ve promisoria, no solamente por el progreso computacional sino porque las condiciones necesarias y suficientes para que una matriz de orden dos sea N-representable han sino completamente determinadas \cite{mazziotti2011two,nakata2012variational}.\\
+	Hay que notar la sorprendente similitud entre las ecuaciones 8 y 14 (segunda nos da la definición del funcional universal $F[\rho]$), nos permite concluir que este funcional exacto solamente puede ser caracterizado plenamente en términos de las condiciones de N-representabilidad de 2-MRD.
 
-	\textbf{El Problema de la N-Representabilidad en DFT}\\
+	Se ha extendido la creencia de que no hay tal problema como el de la N-representabilidad para la versión de Hohenberg-Kohn-Sham de DFT (HKS-DFT), ya que se consideraba que la única condición a imponerse era la N-representabilidad de la densidad, es decir que la densidad provenga de una función de onda de N electrones, y Gilbert \cite{gilbert1975hohenberg} ya había probado que cualquier densidad $\rho$ es N-representable. Con lo cual se daba por descontado el problema.
 
-	  En el contexto de la variación restringida de Levy \cite{levy1979universal}, el funcional universal $F[\rho]$  está definido por:\\
+	Sin embargo el problema de la N-representabilidad en DFT tiene que ver con la N-representabilidad del funcional exacto $F[\rho]$ o de las aproximaciones de este que se usan en la práctica. Recientemente se ha reconocido a este problema como el principal limitante en el desarrollo de la versión HKS de DFT por Ludena et al \cite{ludena2008n}. En este sentido, las soluciones formales (necesarias y suficientes) para el problema de la N-representabilidad funcional de $F[\rho]$ han sido propuestas por Ayers y Liu \cite{ayers2007necessary} y una aún más práctica por medio de un principio variacional para el hueco de intercambio popuesto por Ayers, Cuevas-Saavedra y Chakraborty \cite{cuevas2012symmetric}.
 
-	    \begin{equation}\label{10}
-	      F[\rho]= \infi_{\substack{\displaystyle\rho\in{\cal J}_N}}{\Big\{\langle\Psi_{\rho}\vert\widehat T +\widehat V_{ee}\vert\Psi_{\rho}\rangle\Big\}}
-	    \end{equation}
-
-	  En este caso,la función de onda $\Psi_{\rho}(\big({\bf r}_1,\dots,{\bf r}_N\big)$ es una función de $N$ partículas  en el espacio de Hilbert antisimétrico ${\cal L}_N$ que corresponde a una  densidad fija $\rho$.\\
-	  
-	  Al introducir el operador de dos partículas de orden cero:\\
- 
-	    \begin{equation}\label{11}
-	      \widehat K_{2(0)}^N({\bf r}_i,{\bf r}_j)= {{1}\over{N-1}}\left[t({\bf r}_i)+t({\bf r}_i)\right]+{{1}\over{\vert{\bf r}_i-{\bf r}_j\vert}}
-	    \end{equation}
-
-	  y usando los mismos argumentos que para el caso de la matriz 2, podemos reescribir esta variación como:\\
-
-	    \begin{equation}\label{12}
-	      F[\rho]=\infi_{\substack{\displaystyle{\rho\in\cal J_N}\\\displaystyle{D^2_\rho\longrightarrow\rho\rm{  (fijo)}}}}\Big\{Tr[\widehat K^N_{2(0)} D^2_{\rho}]\Big\}
-	    \end{equation}
-
-	  donde $D^2_{\rho}\in{\cal P}^2_N$, además a su correspondiente principio variacional para la energía del estado fundamental:
-
-	    \begin{equation}\label{12a}
-	      E_0=\infi_{\substack{\displaystyle{\rho\in\cal J_N}}}\Big\{F[\rho] + \int d\sp 3{\bf r} v({\bf r})\Big\}
-	    \end{equation}
-
-	  La sorprendente similitud entre las ecuaciones (\ref{8}) y  (\ref{12}) en donde la última da la definición del funcional $F[\rho]$  exacto nos llevan a la conclusión que este funcional exacto sólamente puede ser caracterizado plenamente en términos de  las condiciones de N-representabilidad de la matriz reducida de orden 2.\\
-
-	  Existe la creencia extendida de que no hay un problema de N-representabilidad para la versión de Hohenberg-Kohn-Sham de DFT, HKS-DFT, ya que se consideraba que la única condición a imponerse era la N-representabilidad de la densidad, esto es, que la densidad provenga de una función de onda de N-electrones. Pero, como fue probado por Gilbert\cite{gilbert1975hohenberg} cualquier $\rho\in{\cal J}_N$ es $N$-representable.\\
-
-	  El problema de la N-representabilidad en DFT tiene que ver con la N-representabilidad  del funcional exacto $F[\rho]$ o de las aproximaciones que se usan en la práctica.  Este problema ha sido reconocido recientemente como el limitante más importante en el desarrollo de la versión HKS de DFT \cite{ludena2008n}. En este sentido, soluciones formales (condiciones necesarias y suficientes) para el problema de la N-representabilidad funcional  de $F[\rho]$ han sido propuestas por   Ayers y Liu \cite{ayers2007necessary} y una más práctica a través de un principio variacional para el hueco de intercambio por Ayers, Cuevas-Saavedra and Chakraborty.\cite{cuevas2012symmetric}.\\
-
-	  Sin embargo, a pesar de este reconocimiento formal, poco se ha hecho para imponer estas condiciones de N-representabilidad en la cosntrucción de los funcionales usados comunmente en DFT.  De hecho, la gran mayoría de los funcionales que se usan en DFT no cumplen con estas condiciones (sin embargo, son simples y fáciles de usar).  Hay que anotar que los funcionales desarrollados en el contexto de la versión de Escalamiento Local de DFT han sido construidos en forma explícita para que cumplan con estas condiciones \cite{kryachko1991formulation,kryachko1992formulation,ludena1999local}\\
-
+	Sin embargo, a pesar de este reconocimiento formal, poco se ha avanzado con respecto a la imposición de estas condiciones de N-representabilidad en la construcción de los funcionales usados comunmente en DFT. De hecho la gran mayoría de funcionales utilizados no cumplen con estas condiciones y se utilizan dada su facilidad y simpleza a la hora de mostrar resultados. Se debe acotar que los funcionales desarrollados en el contexto de la versión de Escalamiento Local de DFT han sido construidos en forma explicita para que cumplan con estas condiciones \cite{kryachko1991formulation,kryachko1992formulation,ludena1999local}.
+	
 	\textbf{El Problema de la N-Representabilidad en cDFT}
 
-	  Dado que se conoce bastante sobre el problema de la N-representabilidad en HKS-DFT, se propone realizar el mismo tipo de análisis a la extensión de la teoría de HKS presente en la formulación para el ensamble macro canónico aplicado a la versión clásica de la teoría del funcional de la densidad, cDFT.\\
+	Puesto que se conoce bastante sobre el problema de la N-representabilidad en HKS-DFT,  se propone  realizar el mismo tipo de análisis a la extensión de esta teoría, presente en la formulación para el ensamble macro canónico aplicado a la versión clásica de la teoría del funcional de la densidad, cDFT.
 
-	  Para poner esta discusión en contexto procedemos a desarrollar la formulación de la teoría del funcional de la densidad para sistemas clásicos.\\
+	En este punto es necesario desarrollar de forma descriptiva la formulación de cDFT, obviamente esto incluirá el tratamiento mediante operadores de índole clásica,
 
-	  Parafraseando  a Evans\cite{evans1979nature}, consideremos el siguiente Hamiltoniano clásico:\\
+	Tomando el trabajo de Evans\cite{evans1979nature}, consideremos el siguiente Hamiltoniano clásico:\\
 
 	    \begin{equation}\label{1}
 	      \widehat H_N= \widehat T + \widehat U + \widehat V
@@ -248,7 +200,7 @@ Dr. Eduardo V.  Ludeña & {\today}\\
 	      U\equiv U({\bf r}_1, ..., {\bf r}_N)
 	    \end{equation}
 
-	  el cual  no necesariamente está restringido a interacciones entre pares de partículas, y en donde el potencial externo (interacción de las partículas con un campo externo) es:\\
+	  en este caso, a diferencia del caso cuántico, el potencial entre las partículas que conforman el sistema no está restringido a interacciones entre pares de estas; y por último el potencial externo (interacción de las partículas con el campo externo) es:\\
 
 	    \begin{equation}\label{4}
 	      V\equiv V({\bf r}_1, ..., {\bf r}_N)=\sum_{i=1}\sp N V_{ext}({\bf r}_i)
@@ -306,59 +258,7 @@ Dr. Eduardo V.  Ludeña & {\today}\\
 	      \Omega[f_o]= -\beta^{-1}\ln{\Xi}
 	    \end{equation}
 
-	  La versión clásica de DFT, cDFT, se basa en una extensión del teorema de Hohenberg-Kohn-Mermin a sistemas clásicos realizada por Evans (ver Apéndice de \cite{evans1979nature}).
-
-	  La extensión procede por el mismo tipo de argumentación basado en el método de reducción al absurdo.\\
-
-	  Consideremos  el Hamiltoniano:
-
-	    \begin{equation}\label{13}
-	      \widehat H_N= \widehat T + \widehat U + \widehat V\sp\prime
-	    \end{equation}
-
-	  en donde 
-
-	    \begin{equation}\label{14}
-	      V\sp\prime=\sum_{i=1}\sp N V_{ext}\sp\prime({\bf r}_i)
-	    \end{equation}
-
-	  El hamiltoniano  $\widehat H_{N}\sp\prime$ tiene asociado una probabilidad de densidad en equilibrio $f\sp\prime$ y $u_j$ potencial macro canónico:\\
-
-	    \begin{equation}\label{15}
-	      \Omega\sp\prime\equiv \Omega[f\sp\prime]
-	    \end{equation}
-
-	  Evans\cite{evans1979nature} que aún en el caso que los dos potenciales  difieran entre sí por una constante, esto es 
- 
-	    \begin{equation}\label{16}
-	      V_{ext}({\bf r})-V_{ext}\sp\prime({\bf r})=cte
-	    \end{equation}
-
-	  las densidades de probabilidad en equilibrio de estos sistemas son diferentes. En efecto,
-
-	    \begin{eqnarray}\label{17}
-	      \Omega[f\sp\prime]&=& Tr_{cl} f\sp\prime (\widehat H_{N}\sp\prime-\mu N-\beta^{-1} \ln{f\sp\prime})
-	      \nonumber\\
-	      &<&
-	      Tr_{cl} f_o (\widehat H_{N}\sp\prime-\mu N-\beta^{-1} \ln{f_o})
-	      \nonumber\\
-	      &<&
-	      \Omega[f_o] + \int d{\bf r}\rho_o({\bf r})(V_{ext}\sp\prime({\bf r})-V_{ext}({\bf r}))
-	    \end{eqnarray}
-
-	  Por otro lado, intercambiando las magnitudes con prima y con suníndice $o$  tenemos que 
- 
-	    \begin{equation}\label{18}
-	      \Omega[f_o] < \Omega[f\sp\prime] + \int d{\bf r}\rho_o({\bf r})(V_{ext}({\bf r})-V_{ext}\sp\prime({\bf r} )   )
-	    \end{equation}
-
-	  ya que su supone que  $f\sp\prime$ da origen a la misma densidad de una partícula $\rho({\bf r})$. Sumando las dos desigualdades se obtiene
- 
-	    \begin{equation}\label{19}
-	      \Omega[f_o]+\Omega[f\sp\prime] < \Omega[f_o]+\Omega[f\sp\prime]
-	    \end{equation}
-
-	  lo cual es una contradicción.  De aquí se desprende que  hay una relación uno-a-uno entre las densidades de probabilidad en equilibrio, las densidades de una partícula y los potenciales externos:
+	  La versión clásica de DFT, cDFT, se basa en una extensión del teorema de Hohenberg-Kohn-Mermin a sistemas clásicos realizada por Evans (ver Apéndice de \cite{evans1979nature}). Esta extensión se realiza usando el mismo tipo de argumentación basada en el método de reducción al absurdo, del cual se desprende que  hay una relación uno-a-uno entre las densidades de probabilidad en equilibrio, las densidades de una partícula y los potenciales externos:
  
 	    \begin{eqnarray}\label{20}
 	      f\sp\prime &\longrightarrow & \rho\sp\prime({\bf r}) \longleftrightarrow V_{ext}\sp\prime({\bf r}) 
@@ -366,7 +266,7 @@ Dr. Eduardo V.  Ludeña & {\today}\\
 	      f_o &\longrightarrow & \rho_o({\bf r})\sp\prime \longleftrightarrow V_{ext}({\bf r} )
 	    \end{eqnarray}
 
-	  En los últimos años se han realizado dos  intentos\cite{dwandaru2011variational,schmidt2012recent} de   proveer una justificación básica a la cDFT por medio de una argumentación que parafrasea a la de Levy cuando este autor presenta una definición del funcional de la densidad para un estado puro cuántico basándose en el método de variación restringida\cite{dwandaru2011variational}.  Pero, debido a la argumentación dada más arriba sobre las dificultades intrínsecas del método de Levy y la demostración que su definición del funcional $F[\rho]$ lleva implícitas las condiciones de $N$.representabilidad de la matrix 2, cabe suponer que en las extensiones de DFT a sistemas clásicos, debe estar también implícito el problema de la $N$-representabilidad del funcional $F_{ex}[\rho]$ el cual es un ingrediente básico del funcional para el ensamble macro canónico en el caso clásico.
+	  En los últimos años se han realizado dos  intentos\cite{dwandaru2011variational,schmidt2012recent} de proveer una justificación básica a la cDFT por medio de una argumentación similar a la de Levy en su definición del funcional de la densidad para un estado puro cuántico basándose en el método de variación restringida\cite{dwandaru2011variational}.  Pero, debido a las dificultades intrínsecas del método de Levy y la demostración que su definición del funcional $F[\rho]$ lleva implícitas las condiciones de $N$.representabilidad de la matrix 2, cabe suponer que en las extensiones de DFT a sistemas clásicos, debe estar también implícito el problema de la $N$-representabilidad del funcional $F_{ex}[\rho]$ el cual es un ingrediente básico del funcional para el ensamble macro canónico en el caso clásico.
  
 
 
