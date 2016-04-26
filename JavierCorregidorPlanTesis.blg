@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/dev/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: JavierCorregidorPlanTesis.aux
+The style file: ieeetr.bst
+Database file #1: JavierCorregidorPlanTesis.bib
+You've used 6 entries,
+            1876 wiz_defined-function locations,
+            515 strings with 4481 characters,
+and the built_in function-call counts, 1605 in all, are:
+= -- 178
+> -- 32
+< -- 0
++ -- 14
+- -- 8
+* -- 94
+:= -- 215
+add.period$ -- 8
+call.type$ -- 6
+change.case$ -- 4
+chr.to.int$ -- 0
+cite$ -- 6
+duplicate$ -- 92
+empty$ -- 158
+format.name$ -- 8
+if$ -- 406
+int.to.chr$ -- 0
+int.to.str$ -- 6
+missing$ -- 8
+newline$ -- 23
+num.names$ -- 6
+pop$ -- 17
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 68
+stack$ -- 0
+substring$ -- 116
+swap$ -- 44
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 16
+width$ -- 7
+write$ -- 64
