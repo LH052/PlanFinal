@@ -9,4 +9,5 @@ JavierCorregidorPlanTesis: JavierCorregidorPlanTesis.tex
 	bibtex JavierCorregidorPlanTesis
 	pdflatex $<
 	pdflatex $<
+	latex2rtf -M12 -D600 JavierCorregidorPlanTesis.tex
 #	xpdf $@
