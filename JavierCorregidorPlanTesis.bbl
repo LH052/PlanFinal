@@ -1,19 +1,87 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{ludena2008n}
+E.~V. Ludeña, F.~Illas, and A.~Ramirez-Solis, ``On the {N}-representability and
+  universality of {F}[$\rho$] in the {H}ohenberg-{K}ohn-{S}ham {V}ersion of
+  {D}ensity {F}unctional {T}heory,'' {\em International Journal of Modern
+  Physics B}, vol.~22, no.~25n26, pp.~4642--4654, 2008.
+
+\bibitem{ayers2007necessary}
+P.~W. Ayers and S.~Liu, ``Necessary and sufficient conditions for the
+  {N}-representability of density functionals,'' {\em Physical Review A},
+  vol.~75, no.~2, p.~022514, 2007.
+
+\bibitem{cuevas2012symmetric}
+R.~Cuevas-Saavedra, D.~Chakraborty, S.~Rabi, C.~Cárdenas, and P.~W. Ayers,
+  ``Symmetric nonlocal weighted density approximations from the
+  exchange-correlation hole of the uniform electron gas,'' {\em Journal of
+  Chemical Theory and Computation}, vol.~8, no.~11, pp.~4081--4093, 2012.
+
+\bibitem{gilbert1975hohenberg}
+T.~Gilbert, ``Hohenberg-{K}ohn theorem for nonlocal external potentials,'' {\em
+  Physical Review B}, vol.~12, no.~6, p.~2111, 1975.
+
+\bibitem{kryachko1991formulation}
+E.~S. Kryachko and E.~V. Ludeña, ``Formulation of {N}-and $\nu$-representable
+  density-functional theory. {I}. {G}round states,'' {\em Physical Review A},
+  vol.~43, no.~5, p.~2179, 1991.
+
+\bibitem{kryachko1992formulation}
+E.~S. Kryachko and E.~V. Ludeña, ``Formulation of {N}-and $\nu$-representable
+  density functional theory. {V}. {E}xchange-only self-consistent field,'' {\em
+  International journal of quantum chemistry}, vol.~43, no.~6, pp.~769--782,
+  1992.
+
+\bibitem{ludena1999local}
+E.~V. Ludeña, V.~Karasiev, R.~López-Boada, E.~Valderrama, and J.~Maldonado,
+  ``Local-scaling transformation version of density functional theory:
+  application to atoms and diatomic molecules,'' {\em Journal of computational
+  chemistry}, vol.~20, no.~1, pp.~155--183, 1999.
+
+\bibitem{hohenberg1964inhomogeneous}
+P.~Hohenberg and W.~Kohn, ``Inhomogeneous electron gas,'' {\em Physical
+  review}, vol.~136, no.~3B, p.~B864, 1964.
+
+\bibitem{kohn1965self}
+W.~Kohn and L.~J. Sham, ``Self-consistent equations including exchange and
+  correlation effects,'' {\em Physical Review}, vol.~140, no.~4A, p.~A1133,
+  1965.
+
+\bibitem{kohn1999nobel}
+W.~Kohn, ``Nobel {L}ecture: Electronic structure of matter-wave functions and
+  density functionals,'' {\em Reviews of Modern Physics}, vol.~71, no.~5,
+  pp.~1253--1266, 1999.
+
+\bibitem{kryachko2014density}
+E.~S. Kryachko and E.~V. Ludeña, {\em Density functional theory: Foundations
+  reviewed}.
+\newblock Elsevier, 2014.
+
+\bibitem{van2007necessary}
+D.~Van~Neck and P.~W. Ayers, ``Necessary conditions for the
+  {N}-representability of the second-order reduced density matrix: Upper bounds
+  on the {P} and {Q} matrices,'' {\em Physical Review A}, vol.~75, no.~3,
+  p.~032502, 2007.
+
+\bibitem{mazziotti2011two}
+D.~A. Mazziotti, ``Two-electron reduced density matrix as the basic variable in
+  many-electron quantum chemistry and physics,'' {\em Chemical reviews},
+  vol.~112, no.~1, pp.~244--262, 2011.
+
+\bibitem{nakata2012variational}
+M.~Nakata, M.~Fukuda, and K.~Fujisawa, ``Variational {A}pproach to {E}lectronic
+  {S}tructure {C}alculations on {S}econd-{O}rder {R}educed {D}ensity {M}atrices
+  and the {N}-{R}epresentability {P}roblem,'' {\em Lecture Note Series},
+  vol.~9, pp.~1--32, 2012.
 
 \bibitem{evans1979nature}
 R.~Evans, ``The nature of the liquid-vapour interface and other topics in the
   statistical mechanics of non-uniform, classical fluids,'' {\em Advances in
   Physics}, vol.~28, no.~2, pp.~143--200, 1979.
 
-\bibitem{garrod1964reduction}
-C.~Garrod and J.~K. Percus, ``Reduction of the {N}-{P}article {V}ariational
-  {P}roblem,'' {\em Journal of Mathematical Physics}, vol.~5, no.~12,
-  pp.~1756--1776, 1964.
-
-\bibitem{mazziotti2011two}
-D.~A. Mazziotti, ``Two-electron reduced density matrix as the basic variable in
-  many-electron quantum chemistry and physics,'' {\em Chemical reviews},
-  vol.~112, no.~1, pp.~244--262, 2011.
+\bibitem{hansen1990theory}
+J.-P. Hansen and I.~R. McDonald, {\em Theory of simple liquids}.
+\newblock Elsevier, 1990.
 
 \bibitem{evans2009warsaw}
 R.~Evans, {\em Density Functional Theory for Inhomogeneous Fluids I: Simple
@@ -25,9 +93,45 @@ G.~Kahl and H.~Löwen, ``Classical density functional theory: an ideal tool to
   study heterogeneous crystal nucleation,'' {\em Journal of Physics: Condensed
   Matter}, vol.~21, no.~46, p.~464101, 2009.
 
+\bibitem{wittkowski2011dynamical}
+R.~Wittkowski and H.~Löwen, ``Dynamical density functional theory for colloidal
+  particles with arbitrary shape,'' {\em Molecular Physics}, vol.~109,
+  no.~23-24, pp.~2935--2943, 2011.
+
+\bibitem{dwandaru2011variational}
+W.~S.~B. Dwandaru and M.~Schmidt, ``Variational principle of classical density
+  functional theory via {L}evy's constrained search method,'' {\em Physical
+  Review E}, vol.~83, no.~6, p.~061133, 2011.
+
+\bibitem{schmidt2012recent}
+M.~Schmidt, M.~Burgis, W.~Dwandaru, G.~Leithall, and P.~Hopkins, ``Recent
+  developments in classical density functional theory: {I}nternal energy
+  functional and diagrammatic structure of fundamental measure theory,'' {\em
+  arXiv preprint arXiv:1212.6358}, 2012.
+
+\bibitem{levy1979universal}
+M.~Levy, ``Universal variational functionals of electron densities, first-order
+  density matrices, and natural spin-orbitals and solution of the
+  v-representability problem,'' {\em Proceedings of the National Academy of
+  Sciences}, vol.~76, no.~12, pp.~6062--6065, 1979.
+
+\bibitem{garrod1964reduction}
+C.~Garrod and J.~K. Percus, ``Reduction of the {N}-{P}article {V}ariational
+  {P}roblem,'' {\em Journal of Mathematical Physics}, vol.~5, no.~12,
+  pp.~1756--1776, 1964.
+
+\bibitem{weeks2003external}
+J.~D. Weeks, ``External fields, density functionals, and the {G}ibbs
+  inequality,'' {\em Journal of statistical physics}, vol.~110, no.~3-6,
+  pp.~1209--1218, 2003.
+
 \bibitem{lowen2009warsaw}
 H.~Löwen, {\em Density Functional Theory for Inhomogeneous Fluids II: Freezing,
   Dynamics, Liquid Crystals}.
 \newblock No Publisher, 2009.
+
+\bibitem{mermin1965thermal}
+N.~D. Mermin, ``Thermal properties of the inhomogeneous electron gas,'' {\em
+  Physical Review}, vol.~137, no.~5A, p.~A1441, 1965.
 
 \end{thebibliography}

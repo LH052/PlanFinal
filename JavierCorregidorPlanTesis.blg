@@ -3,44 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: JavierCorregidorPlanTesis.aux
 The style file: ieeetr.bst
 Database file #1: JavierCorregidorPlanTesis.bib
-You've used 6 entries,
+You've used 26 entries,
             1876 wiz_defined-function locations,
-            515 strings with 4481 characters,
-and the built_in function-call counts, 1605 in all, are:
-= -- 178
-> -- 32
+            645 strings with 8181 characters,
+and the built_in function-call counts, 7465 in all, are:
+= -- 817
+> -- 205
 < -- 0
-+ -- 14
-- -- 8
-* -- 94
-:= -- 215
-add.period$ -- 8
-call.type$ -- 6
-change.case$ -- 4
++ -- 80
+- -- 54
+* -- 468
+:= -- 987
+add.period$ -- 30
+call.type$ -- 26
+change.case$ -- 22
 chr.to.int$ -- 0
-cite$ -- 6
-duplicate$ -- 92
-empty$ -- 158
-format.name$ -- 8
-if$ -- 406
+cite$ -- 26
+duplicate$ -- 432
+empty$ -- 682
+format.name$ -- 54
+if$ -- 1891
 int.to.chr$ -- 0
-int.to.str$ -- 6
-missing$ -- 8
-newline$ -- 23
-num.names$ -- 6
-pop$ -- 17
+int.to.str$ -- 26
+missing$ -- 30
+newline$ -- 85
+num.names$ -- 26
+pop$ -- 59
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 68
+skip$ -- 346
 stack$ -- 0
-substring$ -- 116
-swap$ -- 44
+substring$ -- 519
+swap$ -- 224
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 16
-width$ -- 7
-write$ -- 64
+while$ -- 71
+width$ -- 28
+write$ -- 276
