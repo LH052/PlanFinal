@@ -18,6 +18,7 @@
 \usepackage{epstopdf}
 \usepackage{verbatim}
 \usepackage{url}
+\usepackage{lineno}
 
 %símbolos matemáticos de la AMS
 \usepackage{amsmath,amssymb,amsfonts,latexsym,cancel}
@@ -50,7 +51,7 @@
 
 
 \begin{document}
-
+\linenumbers
 \renewcommand{\refname}{}
 
 \begin{center}
@@ -98,12 +99,16 @@ Dr. Eduardo V.  Ludeña & {\today}\\
 
     \subsection{Objetivo General}
       \begin{itemize}
-	\item Determinar condiciones que debe cumplir el funcional de exceso que depende del ensamble macro canónico de modo que las condiciones del problema de la N-representabilidad en la formulación cDFT se cumplan.
+	\item Examinar el problema de la N-representabilidad en la formulación clásica de la Teoría del Funcional de la Densidad %Original del Doc Ludeña
+	
+	%\item Examinar las condiciones que debe cumplir el funcional de exceso que depende del ensamble macro canónico de modo que las condiciones del problema de la N-representabilidad en la formulación cDFT se cumplan.
       \end{itemize}
     
     \subsection{Objetivos Específicos}
       \begin{itemize}
+	
 	\item  Determinar la forma particular  en que este problema reaparece  en la  formulación clásica  de DFT, esto es, las condiciones que debe cumplir el funcional para ser N-representable.
+	
 	\item Examinar si  aproximaciones simples al funcional de exceso $F_{ex}[n({\bf r})]$ cumplen con las  condiciones determinadas para la  N-representabilidad.
       \end{itemize}
      
@@ -125,11 +130,11 @@ Dr. Eduardo V.  Ludeña & {\today}\\
   \section{Aspectos Metodológicos}
 
     \begin{itemize}
-      \item Análisis de las condiciones de N-representabilidad en el caso general de un ensamble macro canónico clásico.
-      \item  Análisis de los problemas en la formulación variacional del potencial macro canónico expresado como un funcional de la densidad electrónica.
-      \item Análisis  de las condiciones de N-representabilidad para el potencial macro canónico de un sistema clásico.
+      \item \textbf{Etapa 1} Análisis de las condiciones de N-representabilidad en el caso general de un ensamble macro canónico clásico.
+      \item  \textbf{Etapa 2}Análisis de los problemas en la formulación variacional del potencial macro canónico expresado como un funcional de la densidad electrónica.
+      \item \textbf{Etapa 3}Análisis  de las condiciones de N-representabilidad para el potencial macro canónico de un sistema clásico.
     \end{itemize}
-    \newpage
+%    \newpage
 
   \section{Referencias}
 
@@ -139,7 +144,7 @@ Dr. Eduardo V.  Ludeña & {\today}\\
 
   \section{Presupuesto y Fuentes de Financiamiento}
 
-Presupuesto aproximado:
+		A continuación presentamos un presupuesto aproximado (Cuadro \ref{tabla:Presupuesto}), mismo que será financiado con fondos propios del autor.
 
 \begin{table}[htb]
 	\centering
@@ -149,24 +154,24 @@ Presupuesto aproximado:
 		%Primer rubro general
 		Subsistencia & Mensual & 6 & 817.00 & 4,902.00 \\  \hline
 		%Segundo rubro general
-		\multirow{4}{6cm}{Visitas Dr. Eduardo Ludeña - ESPOL - Guayaquil} & Pasajes Ida - Retorno & 6 & 120.00 & 720.00 \\ \cline{2-5}
+		\multirow{4}{4cm}{Visitas Dr. Eduardo Ludeña - ESPOL - Guayaquil (2 días por mes)} & Pasajes Ida - Retorno & 6 & 120.00 & 720.00 \\ \cline{2-5}
 			& Alimentación & 6 & 40.00 & 240.00 \\ \cline{2-5}
 			& Hospedaje & 6 & 80.00 & 480.00 \\ \cline{2-5}
 			& Movilización & 6 & 30.00 & 180.00 \\ \hline
 		%Tercer rubro general
-		\multirow{5}{6cm}{Material de oficina}   & Computador Portátil & 1 & 800.00 & 800.00 \\ \cline{2-5}
+		\multirow{5}{4cm}{Material de oficina}   & Computador Portátil & 1 & 800.00 & 800.00 \\ \cline{2-5}
 		& Esferográficos & 3 & 0.50 & 1.50 \\ \cline{2-5}
 		& Lápices & 5 & 0.40 & 2.00 \\ \cline{2-5}
 		& Papel Bond (Resma) & 1 & 5.00 & 5.00 \\ \cline{2-5}
 		& Copias & 200 & 0.03 & 6.00 \\ \hline 
 		%Cuarto rubro general
-		\multirow{2}{6cm}{Impresiones}  & Artículos & 250 & 0.05 & 12.50 \\ \cline{2-5}
+		\multirow{2}{4cm}{Impresiones}  & Artículos & 250 & 0.05 & 12.50 \\ \cline{2-5}
 		& Adicionales & 250 & 0.05 & 12.50 \\ \hline
 		%Quinto rubro general
-		\multirow{2}{6cm}{Preparación de Borradores} & Impresiones & 3 & 8.00 & 24.00 \\ \cline{2-5}
+		\multirow{2}{4cm}{Preparación de Borradores} & Impresiones & 3 & 8.00 & 24.00 \\ \cline{2-5}
 		& Espiralados & 3 & 3.00 & 9.00 \\ \hline
 		%Sexto rubro general
-		\multirow{3}{6cm}{Preparación del documento final}  & Impresiones & 3 & 8.00 & 24.00 \\ \cline{2-5}
+		\multirow{3}{4cm}{Preparación del documento final}  & Impresiones & 3 & 8.00 & 24.00 \\ \cline{2-5}
 		& Empastados & 3 & 8.00 & 24.00 \\ \cline{2-5}
 		& CD & 1 & 10.00 & 10.00 \\ \hline \hline
 	 \multicolumn{4}{|r|}{Total} & 7350.50 \\ \hline
@@ -175,20 +180,29 @@ Presupuesto aproximado:
 \label{tabla:Presupuesto}
 \end{table}
 
-El proyecto se realizará con fondos propios del autor.\\
-
 \section{Temario (tentativo)}
 
 \begin{itemize}
-\item Capítulo 1. Introducción.
-\item Capítulo 2. Marco Teórico
-\item Capítulo 3. Funcional de la Energía Cinética.
-\item Capítulo 4. Ecuaciones de Euler y Aproximaciones.
-\item Capítulo 5. Comparación con Orbitales Monoelectrónicos.
-\item Capítulo 6. Análisis y Discusión de Resultados.
-\item Capítulo 7: Conclusiones.
+	
+\item \textbf{Capítulo 1.} Introducción.
+\item \textbf{Capítulo 2.} Marco Teórico
+\item \textbf{Capítulo 3.} Condiciones para la N-representabilidad de los Funcionales de Densidad en HKS-DFT: Caso Cuántico
+\item \textbf{Capítulo 4.} Condiciones para la N-representabilidad de los Funciones de Densidad en cDFT: Caso Clásico
+\item \textbf{Capítulo 5.} Análisis y Discusión de Resultados.
+\item \textbf{Capítulo 6.} Conclusiones.
 \item Bibliografía
-\item Anexos
+\item Anexos	
+
+%Original del Doc Ludeña
+%\item Capítulo 1. Introducción.
+%\item Capítulo 2. Marco Teórico
+%\item Capítulo 3. Funcional de la Energía Cinética.
+%\item Capítulo 4. Ecuaciones de Euler y Aproximaciones.
+%\item Capítulo 5. Comparación con Orbitales Monoelectrónicos.
+%\item Capítulo 6. Análisis y Discusión de Resultados.
+%\item Capítulo 7: Conclusiones.
+%\item Bibliografía
+%\item Anexos
 \end{itemize}
 
 \section{Cronograma}
@@ -199,26 +213,19 @@ En la tabla siguiente se muestra el cronograma de actividades previsto para el d
 \begin{tabular}{|l|c|c|c|c|c|c|}
 \hline
 \multirow{2}{*}{\textbf{Actividad}} & \multicolumn{6}{c|}{\textbf{Mes}} \\
-\cline{2-7}
-	&	1	&	2	&	3	&	4	&	5	&	6		\\
-\hline																	
-Revisión bibliográfica de los fundamentos	&	x &	x	&	&	&	& 		 \\
-\hline																	
-Obtención de las ecuaciones de Euler	        &		&		&	x	&	 x	 &	&	 \\
-\hline																	
-Graficación y comparación de las densidades	&	&		&	 \multirow{2}{*}{x}	&	\multirow{2}{*}{x}			& &	\\
-con las obtenidas con orbitales.      	&	&	&	&	&		& 	 \\
-\hline																													
-Análisis de resultados	&	&	&	 & x	&	x		&		\\
-\hline																	
-Redacción del trabajo escrito	&	&	&	& 	&	x	&	\\
-\hline																	
-Presentación del borrador	&	&	&	&	& x		&\\
-\hline																	
-Corrección del borrador	&	&	&	&	&		&	x\\
-\hline																	
-Presentación del trabajo final y 	&	&	&	&		&	&	 \multirow{2}{*}{x} \\
-disertación del mismo	&	&	&	&	&	&			\\
+\cline{2-7} & 1 & 2	& 3	& 4	& 5	& 6	\\ \hline																	
+Revisión bibliográfica de los fundamentos & x & x & & & & \\ \hline
+Obtención de las ecuaciones de Euler & & & x & x & & \\
+\hline		
+\multirow{2}{9cm}{Graficación y comparación de las densidades con las obtenidas con orbitales.} & & & \multirow{2}{*}{x} & \multirow{2}{*}{x} & &	\\
+ & & & & & & \\
+\hline														
+Análisis de resultados & & & & x & x & \\
+\hline														Redacción del trabajo escrito & & & & & x & \\
+\hline														Presentación del borrador & & & & & x &\\
+\hline														Corrección del borrador	& & & & & & x\\
+\hline														\multirow{2}{*}{Presentación y disertación del trabajo final}&	&	&	&		&	&	 \multirow{2}{*}{x} \\
+	&	&	&	&	&	&			\\
 \hline
 \end{tabular}
 \end{center}
